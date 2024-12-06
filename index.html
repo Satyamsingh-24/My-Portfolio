@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+
+    <header>
+      <h1>Satyam Singh</h1>
+      <p>Student | Web Developer(Front-end) | Photographer</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- About Section -->
+    <div class="welcome-text">
+      <h1>Welcome to My Personal Page</h1>
+      <p>Jst want to achieve something new...✌️</p>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="ProfilePic.jpg" alt="Profile Pic" />
+      
+        <p>
+          Hi! I'm Satyam, a BCA student...😄. I love capturing moments that
+          shows the beauty of nature & also have Interest in Web
+          Development...jst for me & my own work's...😄.
+        </p>
+      </div>
+      <br />
+
+      <div class="about-content">
+        <p>
+          "Given below...are some of my works...don't know how it is but it's
+          just a try for being the best...✌️😄"
+        </p>
+      </div>
+    </section>
+    
+    <!-- Projects Section -->
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>
+            My Portfolio which you're currently reading...😄.
+          </p>
+
+        </div>
+          <h3> Other Projects</h3>
+          <p>
+            (All other projects will be mentioned below as per their completion
+            time.)
+          </p>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- Gallery Section -->
+
+    <section id="gallery">
+      <h2>Some of my Clicks✨️</h2>
+      <ul id="blog-posts"></ul>
+      <div class="gallery-container" id="gallery-container">
+        <!-- Images will be inserted here by JavaScript -->
+      </div>
+    </section>
+
+    <script>
+      const images = [
+        "Img Gallery/20241011_164811.jpg",
+        "Img Gallery/20240818_185513.jpg",
+        "Img Gallery/20240922_054316.jpg",
+        "Img Gallery/20241013_171356.jpg",
+        "Img Gallery/20241025_174321.jpg",
+        "Img Gallery/20240825_170208.jpg",
+        "Img Gallery/20241016_062430.jpg",
+        "Img Gallery/20241022_103128.jpg",
+        "Img Gallery/20241112_084847.jpg",
+        "Img Gallery/20240915_182837.jpg",
+        "Img Gallery/20241015_064859.jpg",
+        "Img Gallery/20241204_212649.jpg",
+        // Add full URLs or correct paths here
+      ];
+
+      const galleryContainer = document.getElementById("gallery-container");
+
+      images.forEach((url) => {
+        const item = document.createElement("div");
+        item.classList.add("gallery-item");
+
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = "Photo by Satyam Singh";
+        img.loading = "lazy"; // Performance optimization
+
+        item.appendChild(img);
+        galleryContainer.appendChild(item);
+      });
+    </script>
+  <section id="gallery">
+    <div>
+    <button id="myButton"><a href="Gallery page">Click Me..✌️</a></button>
+    </div>
+  </section>
+    <!-- My Interests Section -->
+
+    <section id="services">
+      <h2>My Interests...✌️</h2>
+      <br />
+      <div class="services-container">
+        <div class="service">
+          <h3>Photography</h3>
+          <p>
+            I love to capture beautiful moment's of nature...like the colourful
+            sky's...flowers...many thing else which you will see...by clicking
+            below...👇
+          </p>
+          <br />
+          <button id="myButton"><a href="#gallery">Click Me..✌️</a></button>
+        </div>
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>
+            I have basic knowledge of HTML and CSS, but I’m learning more to
+            become a proficient web developer. This portfolio is my second
+            project! Feel free to message me on WhatsApp to see my first
+            project.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h1>Contact Me✌️</h1>
+        <p>
+          I would love to hear from you. Please fill out the form below to get
+          in touch. I will get back to you as soon as possible.
+        </p>
+      </div>
+
+      <form id="contact-form" action="process_form.php" method="POST"> <!-- Changed to process_form.php -->
+        <label for="name">Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name.."
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email address.."
+          required
+        />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your message.."
+          rows="5"
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="response-message"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 [Satyam Singh]. All Rights Reserved.</p>
+      <p>
+        Follow me on social media:
+        <a
+          href="https://www.instagram.com/satyam.singh_24?igsh=MWg3Z2ZlNW40bXIwaw=="
+          >Instagram</a
+        >
+      </p>
+      <p>
+        Contact me at: <a href="mailto:singh.satyam0025@gmail.com">Gmail</a> |
+        <a href="https://wa.me/<+91 79850 54135>?text=Hello%20...!!"
+          >WhatsApp</a
+        >
+      </p>
+    </footer>
+  </body>
+  <script src="app.js"></script>
+</html>
